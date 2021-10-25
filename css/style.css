@@ -87,6 +87,7 @@ html, body, input, button {
 
 .sidenav a {
   position: fixed;
+  z-index: 4;
   right: -135px;
   -webkit-transition: 0.3s;
   transition: 0.3s;

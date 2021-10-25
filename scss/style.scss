@@ -36,6 +36,7 @@ html,body,input, button{
 .sidenav{
     a{
         position: fixed;
+        z-index: 4;
         //position: absolute;
         right: -135px;
         transition: 0.3s;
@@ -709,7 +710,7 @@ html,body,input, button{
             margin-bottom: 50px;
             .side-bar{
                 width: 25%;
-
+                //max-height: 300vh;
                 padding: 20px 20px 20px 0px;
                 .bar-content{
                     width: 100%;
@@ -1007,9 +1008,8 @@ html,body,input, button{
                 &::-webkit-scrollbar{
                     width: 0px;
                 }
-                
                 width: 75%;
-                max-height: 221.6vh;
+                max-height: 221.6vh;   
                 overflow: auto;
                 position: relative;
                 .content{
