@@ -145,6 +145,7 @@ const products = [
 const cart =[];
 const wishlist =[];
 ////////////////////////////////////////////////////////////////////////////////////////
+//owlCarousel
 $(".side-slide.owl-carousel").owlCarousel({
     items: 1,
     nav: true,
@@ -168,7 +169,7 @@ $(".brands-slide.owl-carousel").owlCarousel({
     autoplayTimeout: 3000,
 });
 ///////////////////////////////////////////////////////////////
-
+//header bar appear after scrolling
 $(window).scroll(function(){
     const position = $(window).scrollTop();
     if(position > 100){
@@ -178,9 +179,8 @@ $(window).scroll(function(){
     }
 });
 
-
-
 ///////////////////////////////////////////////////////
+//To-top button appear after scrolling
 $(window).scroll(function(){
     const position = $(window).scrollTop();
     if(position > 300){
@@ -205,21 +205,22 @@ $(".totop").click(function (e) {
 
 //////////////////////////////////////////////////////////////////////////////////////
 //modal
+
 setTimeout(()=>{
     $(".modal").fadeIn();
-}, 5000)
+}, 10000) 
+$(".remove-modal").click(function (e) { 
+    $(".modal").fadeOut();
+});
 $(document).click(function (e) { 
-    e.preventDefault();
     //console.log(e.target.closest)
     if(!e.target.closest(".modal-content")){
         $(".modal").fadeOut();
     }
-    
 });
 
 ///////////////////////////////////////////////////////////////
-//cart
-
+//shopping cart fade-in fade-out
 $('.cart').click(function (e) { 
     e.preventDefault();
     //$(".cart-pull-out").slideToggle();
@@ -234,13 +235,16 @@ $('.close-cart').click(function (e) {
 });
 
 
-/* $(document).on("click", function (e) {
-    const target = $(e.target).closest(".cart-pull-out").length
-    const closeCart  = $(e.target).closest(".close-cart").length
-    if(!target && !closeCart){
+$(document).on("click", function (e) {
+    const target = $(e.target).closest(".cart-pull-out-content").length
+    const closeCart  = $(e.target).closest(".cart-icon").length
+    console.log(target);
+    if(!target&&!closeCart){
         $(".cart-pull-out").fadeOut();
     }
-}); */
+});
+
+
 ///////////////////////////////////////////////////////////////
 //render products
 const renderFeaturedProducts = (products) =>{
@@ -325,7 +329,7 @@ const renderSaleProducts = (products) =>{
     products.forEach((item) => {
         if(item.category.includes("sale")){
             $(".list-sale-items").append(`
-                <div class="sale-item flex a-center">
+                <div class="sale-item slide-from-right-animation flex a-center">
                     <div class="sale-item-img">
                         <a href="">
                             <img class="img-main" src=${item.imageMain} alt="">
@@ -474,8 +478,8 @@ const resetCart = () =>{
  $('.cart-list').empty();
 }
 
-
-//add to cart
+////////////////
+//add products to cart
 $(document).on("click", ".add-to-cart", function () {
     //console.log("clickkkkk")
     const id = $(this).data("id")
@@ -517,3 +521,8 @@ renderPopularProducts(products);
 renderSaleProducts(products);
 renderLatestProducts(products);
 renderBestProducts(products);
+
+///////////////////////////////////////////////////////////
+//Wish list
+
+

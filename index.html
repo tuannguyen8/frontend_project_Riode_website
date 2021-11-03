@@ -31,7 +31,7 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <div class="modal">
+    <!-- <div class="modal">
         <div class="modal-content">
     
             <div class="modal-body">
@@ -43,8 +43,13 @@
                     <button>Submit</button>
                 </div>
             </div>
+            <div class="remove-modal">
+                <i class="fas fa-times "></i>
+            </div>
         </div>
+        
     </div>
+ -->
 
     <div class="top-banner">
 
@@ -73,13 +78,10 @@
                 </div>
             </div>
         </header>
-
-        <!-- <div class="static-header">
-
-        </div> -->
+        
         <div class="header-row">
             <div class="container flex j-between a-center">
-                <a href="">
+                <a href="./index.html">
                     <img class="logo" src="./images/logo.png"
                         alt="logo-riode">
                 </a>
@@ -102,7 +104,7 @@
                     </ul>
                 </div>
                 <div class="heart">
-                    <i class="far fa-heart"></i>
+                    <a href="wishlist.html" target="_blank"><i class="far fa-heart"></i></a>
                 </div>
                 <div class="cart flex j-between a-center">
                     <ul class="cart-text">
@@ -725,16 +727,20 @@
                                     <img src="./images/mainBody1.png" alt="">
                                 </div>
                                 <div class="main-text">
-                                    <div class="new-arrivals">
+                                    <div class="new-arrivals slide-up-animation1">
                                         New Arrivals!
                                     </div>
-                                    <div class="offer">
+                                    <div class="offer slide-up-animation2">
                                         T-SHIRT FROM 
                                         <span>$19.99</span>
                                     </div>
-                                    <div class="main-btn">
+                                    <div class="main-btn slide-up-animation3">
                                         <button>SHOP NOW</button>
                                     </div>
+                                    
+                                </div>
+                                <div class="text-background slide-from-left-animation">
+                                    <span>MEN</span>
                                 </div>
                             </div>
                         
@@ -781,8 +787,15 @@
                                     <img src="./images/accessories.jpg" alt="">
                                 </a>
                                 <div class="accessory-content flex a-center j-center">
-                                    ACCESSORIES
+                                    <h3 class="access-hover">ACCESSORIES</h3>
+                                    <a class="shopnow-hover" href="">
+                                        SHOP NOW
+                                    </a>
                                 </div>
+                                <!-- <div class="shop-now flex a-center j-center">
+                                    SHOP NOW
+                                </div> -->
+
                             </div>
 
                             <div class="watches">
@@ -790,7 +803,10 @@
                                     <img src="./images/watches.jpg" alt="">
                                 </a>
                                 <div class="watch-content flex a-center j-center">
-                                    WATCHES
+                                    <h3 class="access-hover">WATCHES</h3>
+                                    <a class="shopnow-hover" href="">
+                                        SHOP NOW
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -856,7 +872,7 @@
                             <div class="black-friday-image">
                                 <img src="./images/black-friday.jpg" alt="">
                             </div>
-                            <div class="black-friday-info">
+                            <div class="black-friday-info zoom-in">
                                 
                                 <div class="coming-soon">COMING SOON</div>
                                 <div class="friday-sale">Black Friday <span>Sale</span></div>
@@ -887,7 +903,7 @@
 
                                 <div class="list-sale-items">
 
-                                    <!-- <div class="sale-item flex a-center">
+                                    <!-- <div class="sale-item slide-animation flex a-center">
                                         <div class="sale-item-img">
                                             <a href="">
                                                 <img class="img-main" src="./images/sale-product-1a.jpg" alt="">
@@ -1094,7 +1110,7 @@
         <div class="container">
             <div class="top-footer">
                 <div class="top-footer-content flex j-between a-center">
-                    <a href="">
+                    <a href="" target="_blank">
                         <img class="logo" src="./images/footer-logo.png" alt="logo-riode">
                     </a>
                 
@@ -1263,18 +1279,14 @@
         
         
 
-    </div>
-
-
-    
-    
-    
+    </div>  
     
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+
 
 
 </html>
