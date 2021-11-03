@@ -2299,12 +2299,12 @@ footer .container .bottom-footer .social .invision:hover i {
 }
 
 .wishlist-content .wishlist-header .wishlist-header-product {
-  margin-right: 285px;
+  margin-right: 360px;
   font-weight: 700;
 }
 
 .wishlist-content .wishlist-header .wishlist-header-price {
-  margin-right: 150px;
+  margin-right: 100px;
   font-weight: 700;
 }
 
@@ -2331,6 +2331,7 @@ footer .container .bottom-footer .social .invision:hover i {
 }
 
 .wishlist-content .wishlist-items .wishlist-item .wishlist-item-img a span {
+  width: 200px;
   font-size: 14px;
   color: rgba(51, 51, 51, 0.7);
 }
@@ -2436,5 +2437,148 @@ footer .container .bottom-footer .social .invision:hover i {
 .quick-review-products .container .quick-review-text-content {
   width: 50%;
   padding: 0px 20px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header {
+  margin-bottom: 10px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .left-text-header .home i {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .left-text-header .to-right {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .left-text-header .review-text-use-for span {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .right-text-header .pre-arrow {
+  color: rgba(51, 51, 51, 0.7);
+  margin-right: 20px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .right-text-header .pre-arrow i {
+  color: rgba(51, 51, 51, 0.7);
+  margin-right: 5px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .right-text-header .next-arrow {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-content-header .right-text-header .next-arrow i {
+  color: rgba(51, 51, 51, 0.7);
+  margin-left: 5px;
+}
+
+.quick-review-products .container .quick-review-text-content h4 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-code {
+  margin: 10px 0px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-code span {
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 12px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-code .review-code {
+  margin-right: 20px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-code .review-cate-info {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-code .review-cate-info:hover {
+  color: #f6a800;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-price {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-rate {
+  margin-bottom: 10px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-rate .review-rate-star {
+  margin-right: 5px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-rate .review-rate-star i {
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-rate .customer-review span {
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-describe span {
+  font-size: 14px;
+  color: #333333;
+}
+
+.quick-review-products .container .quick-review-text-content .division-line {
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+
+.quick-review-products .container .quick-review-text-content .review-buying-group {
+  margin: 20px 0px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-buying-group .review-text-quantity input {
+  text-align: center;
+  border: 1px solid black;
+  width: 100px;
+  padding-left: 15px;
+  font-size: 29px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-buying-group .review-btn {
+  margin-left: 20px;
+  height: 50px;
+  padding: 10px 50px;
+  background: #f6a800;
+  color: white;
+}
+
+.quick-review-products .container .quick-review-text-content .review-buying-group .review-btn i {
+  color: white;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-footer {
+  margin-top: 10px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-footer .review-text-social a {
+  margin-right: 10px;
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-footer .review-text-social a i {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-footer .column-division {
+  margin-right: 10px;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-footer .review-text-wishlist i {
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.quick-review-products .container .quick-review-text-content .review-text-footer .review-text-wishlist span {
+  color: rgba(51, 51, 51, 0.7);
 }
 /*# sourceMappingURL=style.css.map */

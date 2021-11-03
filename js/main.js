@@ -143,7 +143,38 @@ const products = [
 
 ];
 const cart =[];
-const wishlist =[];
+const wishlist =[
+    {
+        "id": 1,
+        "name": "Football Usage",
+        "useFor": "FOR FITNESS",
+        "price": 30,
+        "imageMain": "./images/popularShoes1.jpg",
+        "imageHover": "./images/popularShoes2.jpg",
+        "star": 0,
+        "category": ["popular", "feature", "lastest"]
+    },
+    {
+        "id": 2,
+        "name": "Sports Bag",
+        "useFor": "FOR FITNESS",
+        "price": 65,
+        "imageMain": "./images/popularBag1.jpg",
+        "imageHover": "./images/popularBag2.jpg",
+        "star": 0,
+        "category": ["popular", "feature", "lastest"]
+    },
+    {
+        "id": 3,
+        "name": "Basket Ball Usage",
+        "useFor": "FOR FITNESS",
+        "price": 33,
+        "imageMain": "./images/popularBall1.jpg",
+        "imageHover": "./images/popularBall2.jpg",
+        "star": 0,
+        "category": ["popular", "feature", "lastest"]
+    }
+];
 ////////////////////////////////////////////////////////////////////////////////////////
 //owlCarousel
 $(".side-slide.owl-carousel").owlCarousel({
@@ -238,8 +269,10 @@ $('.close-cart').click(function (e) {
 $(document).on("click", function (e) {
     const target = $(e.target).closest(".cart-pull-out-content").length
     const closeCart  = $(e.target).closest(".cart-icon").length
-    console.log(target);
-    if(!target&&!closeCart){
+    const deleteIconCart = $(e.target).closest(".delete-item").length
+    //console.log(deleteIconCart);
+    //console.log(target);
+    if(!target&&!closeCart&&!deleteIconCart){
         $(".cart-pull-out").fadeOut();
     }
 });
@@ -299,7 +332,7 @@ const renderPopularProducts = (products) =>{
             $(".list-item").append(`
                 <div class="popular-item flex a-center">
                     <div class="popular-product-img">
-                        <a href="">
+                        <a href="#">
                             <img class="img-main" src=${item.imageMain} alt="">
                             <img class="img-hover" src=${item.imageHover} alt="">
                         </a>
@@ -331,7 +364,7 @@ const renderSaleProducts = (products) =>{
             $(".list-sale-items").append(`
                 <div class="sale-item slide-from-right-animation flex a-center">
                     <div class="sale-item-img">
-                        <a href="">
+                        <a href="#">
                             <img class="img-main" src=${item.imageMain} alt="">
                             <img class="img-hover" src=${item.imageHover} alt="">
                         </a>
@@ -339,7 +372,7 @@ const renderSaleProducts = (products) =>{
                     <div class="content">
                         <ul>
                             
-                            <li class="name"><a href=""> ${item.name}</a> </li>
+                            <li class="name"><a href="#"> ${item.name}</a> </li>
                             <li class="price"><span>$</span>${item.price.toFixed(2)}</li>
                             <li>
                                 <i class="fas fa-star"></i>
@@ -364,7 +397,7 @@ const renderLatestProducts = (products) =>{
             $(".list-lastest-items").append(`
                 <div class="sale-item flex a-center">
                     <div class="sale-item-img">
-                        <a href="">
+                        <a href="#">
                             <img class="img-main" src=${item.imageMain} alt="">
                             <img class="img-hover" src=${item.imageHover} alt="">
                         </a>
@@ -372,7 +405,7 @@ const renderLatestProducts = (products) =>{
                     <div class="content">
                         <ul>
                             
-                            <li class="name"><a href=""> ${item.name}</a> </li>
+                            <li class="name"><a href="#"> ${item.name}</a> </li>
                             <li class="price"><span>$</span>${item.price.toFixed(2)}</li>
                             <li>
                                 <i class="fas fa-star"></i>
@@ -397,7 +430,7 @@ const renderBestProducts = (products) =>{
             $(".list-best-items").append(`
                 <div class="sale-item flex a-center">
                     <div class="sale-item-img">
-                        <a href="">
+                        <a href="#">
                             <img class="img-main" src=${item.imageMain} alt="">
                             <img class="img-hover" src=${item.imageHover} alt="">
                         </a>
@@ -405,7 +438,7 @@ const renderBestProducts = (products) =>{
                     <div class="content">
                         <ul>
                             
-                            <li class="name"><a href=""> ${item.name}</a> </li>
+                            <li class="name"><a href="#"> ${item.name}</a> </li>
                             <li class="price"><span>$</span>${item.price.toFixed(2)}</li>
                             <li>
                                 <i class="fas fa-star"></i>
@@ -440,9 +473,9 @@ const renderCart = (cart) =>{
     $(".cart-list").append(`
         <div class="products-in-cart flex j-between a-center">                    
             <div class="item-info flex">
-                <a href=""><img src="${item.imageMain}" alt=""></a>
+                <a href="#"><img src="${item.imageMain}" alt=""></a>
                 <div class="item-detail">
-                    <a href=""><div class="hover-name over-flow-name">${item.name}</div></a>
+                    <a href="#"><div class="hover-name over-flow-name">${item.name}</div></a>
                     <span><span class="quantity">${item.quantity}</span>x$${item.price.toFixed(2)}</span>
                 </div>                       
             </div>
@@ -498,12 +531,12 @@ $(document).on("click", ".add-to-cart", function () {
     
     //render num of item and total in cart
     renderNoOfItemAndTotal();
-
-    resetCart()
-    renderCart(cart)
+    resetCart();
+    renderCart(cart);
   
 });
 
+//delete product from cart
 $(document).on("click", ".delete-item", function () {
   const id = $(this).data("id")
   const existInCart = cart.findIndex(val => val.id === id) 
@@ -513,6 +546,7 @@ $(document).on("click", ".delete-item", function () {
   resetCart();
   renderCart(cart);
 })
+
 //initial render cart
 renderCart(cart);
 
@@ -522,7 +556,70 @@ renderSaleProducts(products);
 renderLatestProducts(products);
 renderBestProducts(products);
 
-///////////////////////////////////////////////////////////
+//..............................................................
 //Wish list
+
+$(document).on("click", ".add-heart", function () {
+    const id = $(this).data("id")
+    const existInCart = cart.findIndex(val => val.id === id)
+    const item = products.find(val => val.id === id)
+    if(!item){
+        return;
+    }
+    
+    if(existInCart === -1){
+        wishlist.push(item);
+    }
+    wishlist.forEach(item => console.log(item));
+    //render num of item and total in cart
+    //renderNoOfItemAndTotal();
+    //resetCart()
+    //renderCart(cart)
+  
+});
+
+const renderWishlist = (wishlist) =>{
+
+    /* if(!cart.length){
+        $('.cart-list').append(`
+            <div style = "opacity: 0.3; height: 200px; display: flex; align-items: center; justify-content: center">
+            <h4>No Products in the cart.<h4>
+            <\div>
+        `)
+        $('.cart-checkout').addClass("cart-checkout-disable")
+        $('.sub-total').addClass("sub-total-disable")
+        return;
+    } */
+    //$('.cart-checkout').removeClass("cart-checkout-disable")
+    //$('.sub-total').removeClass("sub-total-disable")
+    wishlist.forEach(item =>{
+        $(".wishlist-items").append(`
+        <div class="wishlist-item flex a-center j-between">
+            <div class="wishlist-item-img flex">
+                <a href=""><img src="${item.imageMain}" alt=""></a>
+                <a class="flex a-center" href=""><span>${item.name}</span></a>
+            </div>
+            <span class="wishlist-item-price">$${item.price.toFixed(2)}</span>
+
+            <span class="wishlist-item-status">In Stock</span>
+
+            <div class="wishlist-item-btn">
+                <button class="wishlist-quick-view">QUICK VIEW</button>
+                <button class="wishlist-add-to-cart">ADD TO CART</button>
+            </div>
+
+            <div class="delete-item flex a-center j-center">
+                <i class="fas fa-times "></i>
+            </div>
+        </div>
+        `)
+    //const total = cart.reduce((acc, val) => acc + val.price * val.quantity, 0)
+    //$(".total-f").text(`${total.toFixed(2)}`);
+    });
+}
+
+renderWishlist(wishlist);
+
+//..................................................................
 
 

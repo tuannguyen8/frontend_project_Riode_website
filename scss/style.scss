@@ -1,7 +1,5 @@
 @import "variables";
 @import "flex";
-
-
  
 *{
     color: $text-color;
@@ -2041,12 +2039,12 @@ footer{
 
     .wishlist-header{
         .wishlist-header-product{
-            margin-right: 285px;
+            margin-right: 360px;
             font-weight: 700;
         }
 
         .wishlist-header-price{
-            margin-right: 150px;
+            margin-right: 100px;
             font-weight: 700;
         }
 
@@ -2064,7 +2062,7 @@ footer{
         margin-top: 20px;
         .wishlist-item{
             .wishlist-item-img{
-                 a{
+                a{
                     img{
                         height: 100px;
                         width: 100px;
@@ -2073,6 +2071,7 @@ footer{
                 a{
                     margin-left: 10px;
                     span{
+                        width: 200px;
                         font-size: 14px;
                         color: rgba($secondary, 0.7);
                         &:hover{
@@ -2180,7 +2179,146 @@ footer{
         .quick-review-text-content{
             width: 50%;
             padding: 0px 20px;
+            .review-text-content-header{
+                margin-bottom: 10px;
+                .left-text-header{
+                    .home{
+                        i{
+                            color: rgba($secondary, 0.7);
+                        }   
+                    }
+                    .to-right{
+                        color: rgba($secondary, 0.7);
+                    }
+                    .review-text-use-for{
+                        span{
+                            color: rgba($secondary, 0.7);
+                        }
+                    }
+                }
+                .right-text-header{
+                    
+                    .pre-arrow{
+                        color: rgba($secondary, 0.7);
+                        margin-right: 20px;
+                        i{
+                            color: rgba($secondary, 0.7);
+                            margin-right: 5px;
+                        }
+                    }
+                    .next-arrow{
+                        color: rgba($secondary, 0.7);
+                        i{
+                            color: rgba($secondary, 0.7);
+                            margin-left: 5px;
+                        }
+                    }
+
+                }
+            }
+            h4{
+                font-size: 26px;
+                font-weight: 700;
+            }
+
+            .review-text-code{
+                margin: 10px 0px;
+                span{
+                    color: rgba($secondary, 0.7);
+                    font-size: 12px;
+                }
+                .review-code{
+                    margin-right: 20px;
+                }
+                .review-cate-info{
+                    color: rgba($secondary, 0.7);
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
             
+            .review-text-price{
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+            .review-text-rate{
+                margin-bottom: 10px;
+                .review-rate-star{
+                    margin-right: 5px;
+                    i{
+                        font-size: 14px;
+                        color: rgba($secondary, 0.7);
+                    }
+                }
+                .customer-review{
+                    span{
+                        font-size: 12px;
+                        color: rgba($secondary, 0.7);
+                    }
+                }
+                
+            }
+            .review-text-describe{
+                span{
+                    font-size: 14px;
+                    color: $secondary;
+                }
+            }
+            .division-line{
+                margin-top: 10px;
+                border-bottom: 1px solid rgba(#333, 0.1);
+            }
+
+            .review-buying-group{
+                margin: 20px 0px;
+                .review-text-quantity{
+                    input{
+                        text-align: center;
+                        border: 1px solid black;
+                        width: 100px;
+                        padding-left: 15px;
+                        //height: 50px;
+                        font-size: 29px;
+                    }
+                }
+                .review-btn{
+                    margin-left: 20px;
+                    height: 50px;
+                    padding: 10px 50px;
+                    background: $primary;
+                    color: white;
+                    i{
+                        color: white;
+                    }
+                }
+            }
+
+            .review-text-footer{
+                margin-top: 10px;
+                .review-text-social{
+                    a{
+                        margin-right: 10px;
+                        i{
+                            color: rgba($secondary, 0.7);
+                        }
+                    }
+                }
+                .column-division{
+                    margin-right: 10px;
+                    color: rgba($secondary, 0.7);
+                }
+                .review-text-wishlist{
+                    i{
+                        color: rgba($secondary, 0.7);
+                    }
+                    span{
+                        color: rgba($secondary, 0.7);
+                    }
+                    
+                }
+            }
         }
     }
 }
