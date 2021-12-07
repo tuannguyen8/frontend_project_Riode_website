@@ -4,7 +4,7 @@
 ### This is my personal frontend comercial website project.
 ### Marterial:
   - https://jquery.com/
-  - https://www.w3schools.com/howto/howto_css_image_responsive.asp
+  - https://www.w3schools.com/
   - https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
   - https://fontawesome.com/
   
